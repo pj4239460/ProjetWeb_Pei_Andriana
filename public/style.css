@@ -9,17 +9,10 @@ body  {
     background-image:url(images/fond-site.gif);
     background-repeat:repeat-x;
 }
-/*img{
-    padding: 4px;
-    border: 1px solid #999999;
-    background-color:#FFF;  
-}*/
 
 
 p{
-    /*margin-bottom:50px;*/ 
     font-weight:normal;
-    /*padding-top:2px;*/ 
     font-family: "verdana";
     font-size: 11px;
     color:#6c2323;
@@ -31,7 +24,26 @@ article{
     display: flex;
 }
 
+h1 {
+    font-family: "trebuchet ms";
+    font-size: 15px;
+    color:#FF0000;
+}
+h2 {
+    font-family: "verdana";
+    font-size: 15px;
+    color:#4d4d4d;
+    font-variant: small-caps;
+}
 
+table{
+    width:489;
+    height:272;
+    margin-left: auto; 
+    margin-right: auto; 
+    align-content: center;
+    text-align:center;
+}
 
 #global { 
     margin-left: auto; /* Permet de centrer le site */
@@ -92,27 +104,6 @@ article{
 #contenu {
     padding:20px;
 }
-h1 {
-    font-family: "trebuchet ms";
-    font-size: 15px;
-    color:#FF0000;
-}
-h2 {
-    font-family: "verdana";
-    font-size: 15px;
-    color:#4d4d4d;
-    font-variant: small-caps;
-}
-/* PIED DE PAGE */
-#piedDePage{
-    background-color:#FFFFFF;
-    text-align:center;
-    font-family:verdana;
-    font-size:9px;
-    height:15px;
-    padding-top:2px;
-    color:#5a0000;  
-}
 
 ul#slides {
     position: relative;
@@ -165,23 +156,25 @@ ul#slides {
     background: purple;
 }
 
-video{
-    width:800px;
-}
 
 .buttons {
     text-align: center;
 }
 
 .tablealign{
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
-table{
-	width:489;
-	height:272;
-	margin-left: auto; 
-	margin-right: auto; 
-	align-content: center;
-	text-align:center;
+
+/* PIED DE PAGE */
+#piedDePage{
+    background-color:#FFFFFF;
+    text-align:center;
+    font-family:verdana;
+    font-size:9px;
+    height:15px;
+    padding-top:2px;
+    color:#5a0000;  
 }
+
+

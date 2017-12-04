@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Show All Films</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
-
-        <!--<link href="../public/style.css" rel="stylesheet" type="text/css">--> 
-    </head>
-    <body>
-        
-        <!--<script src="../public/JavaScript.js"></script>--> 
-        <div id="global">
-            <header>
-                <div id="bandeau">
-                    <span class="titreSite">Tous Les Films</span>
-                    <br />
-                    <span class="slogan">Retrouvez les plaisirs!</span>
-                </div>
-
-
-                <span class="i_tel">Service Client: +33 12 34 56 78 90</span>
-            </header>
-            <nav>
-
-                    <ul id="menu">
-                        <li><a href="/" title="Voir la page d'accueil">Accueil</a></li>
-                        <li><a href="/show_all" title="Show all films">All Films</a></li>
-                        <li><a href="/Ajouter" title="Ajouter un film">Ajouter</a></li>
-                        <li><a href="/edit_film" title="Editer un film">Editer</a></li>
-                        <li><a href="/delete_film" title="Supprimer un film">Supprimer</a></li>
-                    </ul>
-                        
-            </nav>
-            <div>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Show All Films</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<!--<link href="../public/style.css" rel="stylesheet" type="text/css">-->
+	</head>
+	<body>
+		
+		<!--<script src="../public/JavaScript.js"></script>-->
+		<div id="global">
+			<header>
+				<div id="bandeau">
+					<span class="titreSite">Tous Les Films</span>
+					<br />
+					<span class="slogan">Retrouvez les plaisirs!</span>
+				</div>
+				<span class="i_tel">Service Client: +33 12 34 56 78 90</span>
+			</header>
+			<nav>
+				<ul id="menu">
+					<li><a href="/" title="Voir la page d'accueil">Accueil</a></li>
+					<li><a href="/show_all" title="Show all films">All Films</a></li>
+					<li><a href="/Ajouter" title="Ajouter un film">Ajouter</a></li>
+					<li><a href="/edit_film" title="Editer un film">Editer</a></li>
+					<li><a href="/delete_film" title="Supprimer un film">Supprimer</a></li>
+				</ul>
+				
+			</nav>
+			<div>
 				<form action="/delete" method="post">
-					 <div class="tablealign">
-               <table>
-					  <tbody>
-					  	<tr>
-						  <th scope="row"><label for="ID" >ID:</label></th>
-						  <td><input type="text" name="ID" id="ID" size="53"></td>
-						</tr>
-					  </tbody>
-					   
-				</table>
+					<div class="tablealign">
+						<table>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="ID" >ID:</label></th>
+									<td><input type="text" name="ID" id="ID" size="53"></td>
+								</tr>
+							</tbody>
+							
+						</table>
 					</div>
-                  		<div class="buttons">
-                   		<input type="submit" name="submit" id="submit" value="Submit">
-                      <input type="reset" name="reset" id="reset" value="Reset">
-                      </div>
-			    </form>
-			    
+					<div class="buttons">
+						<input type="submit" name="submit" id="submit" value="Submit">
+						<input type="reset" name="reset" id="reset" value="Reset">
+					</div>
+				</form>
+				
 			</div>
 			<footer id="piedDePage">
-                <a href="mailto:12456@example.com">Contactez-Nous</a> 
-            </footer>
-            
-            
-        </div>
-
-    </body>
+				<a href="mailto:12456@example.com">Contactez-Nous</a>
+			</footer>
+			
+			
+		</div>
+	</body>
 </html>
