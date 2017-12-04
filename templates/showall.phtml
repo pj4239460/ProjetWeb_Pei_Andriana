@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Show All Films</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <!--<link href="../public/style.css" rel="stylesheet" type="text/css">--> 
+    </head>
+    <body>
+    	
+        <!--<script src="../public/JavaScript.js"></script>--> 
+        <div id="global">
+            <header>
+        		<div id="bandeau">
+        			<span class="titreSite">Tous Les Films</span>
+        			<br />
+        			<span class="slogan">Retrouvez les plaisirs!</span>
+        		</div>
+
+
+        		<span class="i_tel">Service Client: +33 12 34 56 78 90</span>
+            </header>
+            <nav>
+
+                    <ul id="menu">
+                        <li><a href="/" title="Voir la page d'accueil">Accueil</a></li>
+                        <li><a href="/Ajouter" title="Ajouter un film">Ajouter</a></li>
+                        <li><a href="/show_all" title="Show all films">All Films</a></li>
+                        <li><a href="/edit_film" title="Editer un film">Editer</a></li>
+                        <li><a href="/delete_film" title="Supprimer un film">Supprimer</a></li>
+                    </ul>
+                        
+            </nav>
+            <div>
+                <?php foreach ($films as $v) {?>
+                    <article>
+                        <br>
+                        <div>
+                            <img src="<?php echo $v->Image_lien?>" />
+                        </div>
+                        <div>
+                                <h1><?php echo $v->Titre;?></h1>
+                                <br>
+                                <h2>De <?php echo $v->Directeur;?></h2>
+                                <br>
+                                <h2>Avec <?php echo $v->Acteur;?></h2>
+                                <br>
+                                <h2>Numéro ID <?php echo $v->ID;?></h2>
+                                <br>
+                                <form action='/show_one' method='get'>
+                                    <input type='hidden'  name='ID' value='<?php echo $v->ID; ?>' >
+                                    <input type='submit' name='submit' id='submit' value='Voir ce film'>
+                                </form>
+                        </div>
+                        <br>
+                    </article>
+                <?php } ?>
+            </div>
+            <footer id="piedDePage">
+                <a href="mailto:12456@example.com">Contactez-Nous</a> 
+            </footer>
+            
+            
+            
+        </div>
+
+    </body>
+</html>
