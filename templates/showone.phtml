@@ -25,8 +25,8 @@
 
                     <ul id="menu">
                         <li><a href="/" title="Voir la page d'accueil">Accueil</a></li>
-                        <li><a href="/Ajouter" title="Ajouter un film">Ajouter</a></li>
                         <li><a href="/show_all" title="Show all films">All Films</a></li>
+                        <li><a href="/Ajouter" title="Ajouter un film">Ajouter</a></li>
                         <li><a href="/edit_film" title="Editer un film">Editer</a></li>
                         <li><a href="/delete_film" title="Supprimer un film">Supprimer</a></li>
                     </ul>
@@ -34,10 +34,15 @@
             </nav>
             <div>
                 <p><img src="<?php echo $film->Image_lien?>" /></p>
-                <p><?php echo $film->Titre;?></p>
-                <p> <?php echo $film->Directeur; ?></p>
-                <p><?php echo $film->Acteur; ?></p>
+                <br>
+                <h1><?php echo $film->Titre;?></h1>
+                <br>
+                <h2>De <?php echo $film->Directeur; ?></h2>
+                <br>
+                <h2>Avec <?php echo $film->Acteur; ?></h2>
+                <br>
                 <p><?php echo $film->Synopsis; ?></p>
+                <br>
                     
             </div>
             <footer id="piedDePage">
