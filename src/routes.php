@@ -2,15 +2,7 @@
 
 use Slim\Http\Request;
 use Slim\Http\Response;
-// Routes
 
-//$app->get('/[{name}]', function (Request $request, Response $response, array $args) {
-    // Sample log message
-  //  $this->logger->info("Slim-Skeleton '/' route");
-
-    // Render index view
-    //return $this->renderer->render($response, 'index.phtml', $args);
-//});
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     // Sample log message
@@ -47,6 +39,7 @@ $app->get('/create_table', function (Request $request, Response $response, array
         $table->string('Image_lien')->default('');
         $table->timestamps();
     });
+
 
     
 
@@ -96,6 +89,10 @@ $app->get('/edit_film', function (Request $request, Response $response, array $a
 $app->post('/edit', function (Request $request, Response $response, array $args) {
     $ID=strip_tags($request->getParam('ID'));
      $Titre=strip_tags($request->getParam('Titre'));
+     $Directeur=strip_tags($request->getParam('Directeur'));
+     $Synopsis=strip_tags($request->getParam('Synopsis'));
+     $Acteur=strip_tags($request->getParam('Acteur'));
+     $Image_lien=strip_tags($request->getParam('Image_lien'));
     $this->db;
     $films = films::find($ID);
     $films->Titre=$Titre;
@@ -143,13 +140,7 @@ $app->get('/show_one', function (Request $request, Response $response, array $ar
 });
 
 
-/*$app->post('/delete_all', function (Request $request, Response $response, array $args) {
-    $ID=strip_tags($request->getParam('ID'));
-    $this->db;
-    $films = films::find($ID);
-    $films->delete();
-    echo "delete sucess";
-});*/
+
 
 
 
