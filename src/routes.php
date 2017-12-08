@@ -17,14 +17,6 @@ $app->get('/create_table', function (Request $request, Response $response, array
 
 
     $this->db;
-
-    
-    $container[App\WIDgetController::class] = function ($c) {
-    $view = $c->get('view');
-    $logger = $c->get('logger');
-    $table = $c->get('db')->table('table_name');
-    return new \App\WIDgetController($view, $logger, $table);
-    };
     
     $capsule = new \Illuminate\Database\Capsule\Manager;
 
@@ -37,7 +29,6 @@ $app->get('/create_table', function (Request $request, Response $response, array
         $table->string('Acteur')->default('');
         $table->text('Synopsis');
         $table->string('Image_lien')->default('');
-        $table->timestamps();
     });
 
 
