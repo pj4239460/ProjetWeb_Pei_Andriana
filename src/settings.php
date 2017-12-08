@@ -8,7 +8,7 @@ return [
 
         'db' => [ // configuration de base de donnees
             'driver' => 'mysql',
-            'host' => '127.0.0.1',
+            'host' => 'localhost',
             'database' => 'projetmarket',
             'username' => 'root',
             'password' => '',

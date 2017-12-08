@@ -23,7 +23,7 @@ $app->get('/create_table', function (Request $request, Response $response, array
     $capsule::schema()->dropIfExists('films');
 
     $capsule::schema()->create('films', function (\Illuminate\Database\Schema\Blueprint $table) {
-        $table->increments('ID');
+        $table->increments('id');
         $table->string('Titre')->default('');
         $table->string('Directeur')->default('');
         $table->string('Acteur')->default('');
@@ -78,14 +78,14 @@ $app->get('/edit_film', function (Request $request, Response $response, array $a
 });
 
 $app->post('/edit', function (Request $request, Response $response, array $args) {
-    $ID=strip_tags($request->getParam('ID'));
+    $id=strip_tags($request->getParam('id'));
      $Titre=strip_tags($request->getParam('Titre'));
      $Directeur=strip_tags($request->getParam('Directeur'));
      $Synopsis=strip_tags($request->getParam('Synopsis'));
      $Acteur=strip_tags($request->getParam('Acteur'));
      $Image_lien=strip_tags($request->getParam('Image_lien'));
     $this->db;
-    $films = films::find($ID);
+    $films = films::find($id);
     $films->Titre=$Titre;
      $films->Directeur=$Directeur;
      $films->Acteur=$Acteur;
@@ -93,7 +93,7 @@ $app->post('/edit', function (Request $request, Response $response, array $args)
      $films->Image_lien=$Image_lien;
     $films->save();
     echo "<script>alert('Edité avec succès');</script>";
-    return $this->renderer->render($response, 'edit.html', $args);
+    return $this->renderer->render($response, 'edit.html', ["films" => $films]);
 });
 
 $app->get('/delete_film', function (Request $request, Response $response, array $args) {
@@ -105,9 +105,9 @@ $app->get('/delete_film', function (Request $request, Response $response, array 
 });
 
 $app->post('/delete', function (Request $request, Response $response, array $args) {
-    $ID=strip_tags($request->getParam('ID'));
+    $id=strip_tags($request->getParam('id'));
     $this->db;
-    $films = films::where('ID','=',$ID)->first();
+    $films = films::where('id','=',$id)->first();
     $films->delete();
     echo "<script>alert('Supprimé avec succès');</script>";
     return $this->renderer->render($response, 'delete.html', ["$films"=>$films]);
@@ -123,9 +123,9 @@ $app->get('/show_all', function (Request $request, Response $response, array $ar
 
 $app->get('/show_one', function (Request $request, Response $response, array $args) {
     
-    $ID=strip_tags($request->getParam('ID'));
+    $id=strip_tags($request->getParam('id'));
     $this->db;
-    $film = films::find($ID);
+    $film = films::find($id);
     
     return $this->renderer->render($response, 'showone.phtml', ["film"=>$film]);
 });

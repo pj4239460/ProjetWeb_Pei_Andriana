@@ -1,7 +1,8 @@
 <?php 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 class films extends Eloquent {
-	protected $ID = ['ID'];
+	protected $table = 'films';
+	protected $id = ['id'];
 	protected $Titre = ['Titre'];
 	protected $Directeur = ['Directeur'];
 	protected $Acteur = ['Acteur'];
